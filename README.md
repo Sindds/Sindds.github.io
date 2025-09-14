@@ -1,1 +1,0 @@
-# Sindds.github.io

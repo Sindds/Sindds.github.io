@@ -1,0 +1,117 @@
+.todo-app {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.todo-title {
+  margin-bottom: 0.4em;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.input-section {
+  display: flex;
+  gap: 0.6em;
+  margin-bottom: 1.2em;
+}
+
+.task-input {
+  flex: 1;
+  padding: 0.6em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  padding: 0.7em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9;
+}
+
+.task-item.dragging {
+  opacity: 0.5;
+  background-color: #e3f2fd;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.checkbox {
+  margin-right: 0.7em;
+  cursor: pointer;
+}
+
+.task-text {
+  flex: 1;
+  font-size: 1em;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #ff4444;
+  padding: 0;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  color: #cc0000;
+}
+
+.empty-state {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  margin-top: 1.4em;
+}
+
+@media (max-width: 340px) {
+  .add-btn {
+    padding: 0.6em 0.6em;
+    font-size: 0.8em;
+  }
+  .task-input {
+    max-width: 210px;
+  }
+}

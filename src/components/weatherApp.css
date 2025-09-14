@@ -1,0 +1,402 @@
+.weather-app {
+
+  margin: 20px 0;
+  padding: 20px;
+
+
+}
+
+.weather-container {
+  max-width: 650px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  min-height: 300px;
+}
+
+/* Loader */
+.weather-loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.weather-loader {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #74b9ff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: weather-rotation 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.weather-loading-text {
+  color: #636e72;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Поиск */
+.weather-search-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.weather-search-input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.weather-search-input:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 0 3px rgba(116, 185, 255, 0.1);
+}
+
+.weather-search-button {
+  padding: 14px 25px;
+  background: #74b9ff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.weather-search-button:hover {
+  background: #0984e3;
+  transform: translateY(-1px);
+}
+
+/* Ошибки */
+.weather-error-message {
+  color: #d63031;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(214, 48, 49, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(214, 48, 49, 0.2);
+  font-weight: 500;
+}
+
+/* Текущая погода */
+.weather-current {
+  margin-bottom: 30px;
+}
+
+.weather-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.weather-city-name {
+  font-size: 2.2em;
+  color: #2d3436;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.weather-description {
+  color: #636e72;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  margin: 0;
+  font-weight: 500;
+}
+
+.weather-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.weather-temperature {
+  font-size: 3em;
+  font-weight: 300;
+  color: #2d3436;
+  margin: 0;
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.weather-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.weather-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.weather-label {
+  color: #636e72;
+  font-weight: 500;
+}
+
+.weather-value {
+  color: #2d3436;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Прогноз */
+.weather-forecast {
+  border-top: 2px solid #e9ecef;
+  padding-top: 25px;
+}
+
+.forecast-title {
+  text-align: center;
+  color: #2d3436;
+  font-size: 1.4em;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.forecast-days {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 18px;
+}
+
+.forecast-day {
+  text-align: center;
+  padding: 18px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.forecast-day:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.forecast-date {
+  font-size: 13px;
+  color: #636e72;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Температуры день/ночь */
+.forecast-temps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.temp-day, .temp-night {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.temp-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.temp-day .temp-icon {
+  color: #f39c12;
+}
+
+.temp-night .temp-icon {
+  color: #3498db;
+}
+
+.temp-value {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.temp-day .temp-value {
+  color: #e67e22;
+}
+
+.temp-night .temp-value {
+  color: #2980b9;
+}
+
+.temp-divider {
+  color: #bdc3c7;
+  font-weight: 500;
+  font-size: 1.2em;
+  margin: 0 2px;
+}
+
+/* Иконки погоды */
+.forecast-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.forecast-icon-day, .forecast-icon-night {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-icon-day {
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+}
+
+.forecast-icon-night {
+  background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+}
+
+.forecast-pressure {
+  font-size: 0.9em;
+  color: #6c757d;
+  font-weight: 500;
+  margin: 8px 0;
+  background: rgba(108, 117, 125, 0.1);
+  padding: 4px 8px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.forecast-desc {
+  font-size: 11px;
+  color: #636e72;
+  text-transform: capitalize;
+  line-height: 1.3;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+@keyframes weather-rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .weather-app {
+    margin: 15px;
+    padding: 15px;
+  }
+  
+  .weather-container {
+    padding: 20px;
+  }
+  
+  .weather-search-form {
+    flex-direction: column;
+  }
+  
+  .weather-main {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .weather-temperature {
+    font-size: 2.5em;
+  }
+  
+  .weather-icon {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .weather-details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .forecast-days {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+  
+  .forecast-day {
+    padding: 15px;
+  }
+  
+  .forecast-temps {
+    gap: 6px;
+  }
+  
+  .temp-value {
+    font-size: 1em;
+  }
+  
+  .forecast-icons {
+    gap: 12px;
+  }
+  
+  .forecast-icon-day, .forecast-icon-night {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-city-name {
+    font-size: 1.8em;
+  }
+  
+  .forecast-days {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .weather-temperature {
+    font-size: 2.2em;
+  }
+  
+  .forecast-date {
+    font-size: 12px;
+  }
+  
+  .forecast-temps {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .temp-divider {
+    display: none;
+  }
+  
+  .temp-day, .temp-night {
+    flex-direction: row;
+    gap: 6px;
+  }
+  
+  .forecast-pressure {
+    font-size: 0.8em;
+  }
+}
