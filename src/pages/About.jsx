@@ -1,87 +1,104 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom'
+import { Page } from '../configs/page.config'
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto fade-in">
-        <section className="text-center mb-16 transition-all duration-500 hover:scale-105">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4 transform transition-transform duration-300 hover:scale-105">
+    <div className='min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-4xl mx-auto fade-in'>
+        <section className='text-center mb-16 transition-all duration-500 hover:scale-105'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-4 transform transition-transform duration-300 hover:scale-105'>
             Фронтенд-разработчик на React
           </h1>
         </section>
 
-        <section className="mb-16 transition-all duration-500">
-          <div className="bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-            <p className="text-lg text-gray-700 mb-6 transition-colors duration-300 hover:text-gray-900">
-              Здравствуйте! Меня зовут <span className="font-semibold">Синдяев Дмитрий</span>, и я активно ищу свою первую работу в качестве фронтенд-разработчика на React.
+        <section className='mb-16 transition-all duration-500'>
+          <div className='bg-gray-50 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300'>
+            <p className='text-lg text-gray-700 mb-6 transition-colors duration-300 hover:text-gray-900'>
+              Здравствуйте! Меня зовут <span className='font-semibold'>Синдяев Дмитрий</span>, и я
+              активно ищу свою первую работу в качестве фронтенд-разработчика на React.
             </p>
-            <div className="bg-blue-50 p-6 rounded-xl mt-8 transition-all duration-300 hover:shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-blue-800 transform transition-transform duration-300 hover:scale-101">
+            <div className='bg-blue-50 p-6 rounded-xl mt-8 transition-all duration-300 hover:shadow-md'>
+              <h3 className='text-xl font-semibold mb-4 text-blue-800 transform transition-transform duration-300 hover:scale-101'>
                 Текущая цель:
               </h3>
-              <p className="text-lg text-gray-700 transition-colors duration-300 hover:text-gray-900 hover:scale-101">
-                Начать коммерческую практику в команде, где смогу прокачать навыки в JS, TypeScript, React под руководством опытных разработчиков. 
-                Всегда открыт к обучению, новым технологиям.
+              <p className='text-lg text-gray-700 transition-colors duration-300 hover:text-gray-900 hover:scale-101'>
+                Начать коммерческую практику в команде, где смогу прокачать навыки в JS, TypeScript,
+                React под руководством опытных разработчиков. Всегда открыт к обучению, новым
+                технологиям.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="mb-16 transition-all duration-500">
-          <h2 className="text-3xl font-bold text-center mb-12 transform transition-transform duration-300 hover:scale-105">
+        <section className='mb-16 transition-all duration-500'>
+          <h2 className='text-3xl font-bold text-center mb-12 transform transition-transform duration-300 hover:scale-105'>
             Мой стек технологий
           </h2>
-          
-          <div className="bg-gray-50 rounded-2xl p-6 shadow-sm transition-all ">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-              {['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'React Router', 'Tailwind CSS', 'Jest', 'Vite', 'Git', 'REST API', 'Figma'].map((tech) => (
-                <div 
+
+          <div className='bg-gray-50 rounded-2xl p-6 shadow-sm transition-all '>
+            <div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-center'>
+              {[
+                'HTML5',
+                'CSS3',
+                'JavaScript',
+                'TypeScript',
+                'React',
+                'React Router',
+                'Tailwind CSS',
+                'Jest',
+                'Vite',
+                'Git',
+                'REST API',
+                'Figma',
+              ].map(tech => (
+                <div
                   key={tech}
-                  className="bg-white py-3 rounded-lg shadow-xs border border-gray-100 transition-all duration-300 hover:border-gray-300 hover:scale-105">
-                  <span className="text-gray-700 font-medium">{tech}</span>
+                  className='bg-white py-3 rounded-lg shadow-xs border border-gray-100 transition-all duration-300 hover:border-gray-300 hover:scale-105'
+                >
+                  <span className='text-gray-700 font-medium'>{tech}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="mb-16 transition-all duration-500">
-          <h2 className="text-3xl font-bold text-center mb-12 transform transition-transform duration-300 hover:scale-105">
+        <section className='mb-16 transition-all duration-500'>
+          <h2 className='text-3xl font-bold text-center mb-12 transform transition-transform duration-300 hover:scale-105'>
             Ключевые компетенции
           </h2>
-          <div className="bg-gray-50 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-101">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6">
-              <ul className="space-y-3">
-                <li className="flex items-start transition-all duration-300 hover:text-gray-900">
-                  <span className="text-blue-500 mr-2">•</span>
+          <div className='bg-gray-50 rounded-2xl p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-101'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6'>
+              <ul className='space-y-3'>
+                <li className='flex items-start transition-all duration-300 hover:text-gray-900'>
+                  <span className='text-blue-500 mr-2'>•</span>
                   <span>Адаптивная и кроссбраузерная верстка (Flexbox, Grid)</span>
                 </li>
-                <li className="flex items-start transition-all duration-300 hover:text-gray-900">
-                  <span className="text-blue-500 mr-2">•</span>
+                <li className='flex items-start transition-all duration-300 hover:text-gray-900'>
+                  <span className='text-blue-500 mr-2'>•</span>
                   <span>JavaScript (ES2023+): асинхронность, работа с DOM API</span>
                 </li>
 
-                <li className="flex items-start transition-all duration-300 hover:text-gray-900">
-                  <span className="text-blue-500 mr-2">•</span>
+                <li className='flex items-start transition-all duration-300 hover:text-gray-900'>
+                  <span className='text-blue-500 mr-2'>•</span>
                   <span>React 18+: хуки (useState, useEffect, useMemo)</span>
                 </li>
               </ul>
-              
-              <ul className="space-y-3">
-                <li className="flex items-start transition-all duration-300 hover:text-gray-900">
-                  <span className="text-blue-500 mr-2">•</span>
+
+              <ul className='space-y-3'>
+                <li className='flex items-start transition-all duration-300 hover:text-gray-900'>
+                  <span className='text-blue-500 mr-2'>•</span>
                   <span>TypeScript</span>
                 </li>
-                <li className="flex items-start transition-all duration-300 hover:text-gray-900">
-                  <span className="text-blue-500 mr-2">•</span>
+                <li className='flex items-start transition-all duration-300 hover:text-gray-900'>
+                  <span className='text-blue-500 mr-2'>•</span>
                   <span>Стилизация через TailwindCSS и модульные CSS</span>
                 </li>
-                <li className="flex items-start transition-all duration-300 hover:text-gray-900">
-                  <span className="text-blue-500 mr-2">•</span>
+                <li className='flex items-start transition-all duration-300 hover:text-gray-900'>
+                  <span className='text-blue-500 mr-2'>•</span>
                   <span>Система контроля версий Git</span>
                 </li>
-                <li className="flex items-start transition-all duration-300 hover:text-gray-900">
-                  <span className="text-blue-500 mr-2">•</span>
+                <li className='flex items-start transition-all duration-300 hover:text-gray-900'>
+                  <span className='text-blue-500 mr-2'>•</span>
                   <span>Написание юнит-тестов на Jest</span>
                 </li>
               </ul>
@@ -89,21 +106,23 @@ const About = () => {
           </div>
         </section>
 
-        <section className="text-center transition-all duration-500 hover:scale-[1.01]">
-          <div className="bg-gray-50 rounded-2xl p-8 shadow-sm transition-all duration-300 hover:shadow-md">
-            <p className="text-lg text-gray-700 mb-6 transition-colors duration-300 hover:text-gray-900">
-              Я ищу команду, где смогу применять и приумножать свои знания, учиться у опытных коллег и приносить реальную пользу. Готов усердно работать и быстро вникать в новые задачи.
+        <section className='text-center transition-all duration-500 hover:scale-[1.01]'>
+          <div className='bg-gray-50 rounded-2xl p-8 shadow-sm transition-all duration-300 hover:shadow-md'>
+            <p className='text-lg text-gray-700 mb-6 transition-colors duration-300 hover:text-gray-900'>
+              Я ищу команду, где смогу применять и приумножать свои знания, учиться у опытных коллег
+              и приносить реальную пользу. Готов усердно работать и быстро вникать в новые задачи.
             </p>
-            <a
-              href="/contacts"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1 active:scale-95">
+            <NavLink
+              to={Page.CONTACTS}
+              className='inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1 active:scale-95'
+            >
               Связаться со мной
-            </a>
+            </NavLink>
           </div>
         </section>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
