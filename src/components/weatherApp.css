@@ -164,6 +164,7 @@
   color: #2d3436;
   font-weight: 600;
   font-size: 15px;
+  padding-left: 10px;
 }
 
 /* Прогноз */
@@ -371,7 +372,7 @@
   }
   
   .forecast-days {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1fr);
   }
   
   .weather-temperature {

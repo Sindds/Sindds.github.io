@@ -9,7 +9,7 @@ const Footer = ({
       name: '',
       href: 'https://saratov.hh.ru/resume/d7bab5ebff0f45d9ab0039ed1f79614a50496c',
       icon: (
-        <img src='/public/HHru_icon.png' alt='HH.ru' className='w-10 h-10 hover:scale-110'></img>
+        <img src='/HHru_icon.png' alt='HH.ru' className='w-10 h-10 hover:scale-110'></img>
       ),
     },
     {
@@ -17,7 +17,7 @@ const Footer = ({
       href: 'https://t.me/sdmitris',
       icon: (
         <img
-          src='/public/telegram_icon.png'
+          src='/telegram_icon.png'
           alt='Telegram'
           className='w-10 h-10 hover:scale-110'
         ></img>
@@ -25,9 +25,9 @@ const Footer = ({
     },
     {
       name: '',
-      href: '#',
+      href: 'https://github.com/Sindds/Sindds.github.io',
       icon: (
-        <img src='/public/GitHub_icon.png' alt='GitHub' className='w-14 h-14 hover:scale-110'></img>
+        <img src='/GitHub_icon.png' alt='GitHub' className='w-14 h-14 hover:scale-110'></img>
       ),
     },
   ],
