@@ -60,6 +60,8 @@ const Footer = ({
               <NavLink
                 key={index}
                 to={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className='text-gray-600 hover:text-black transition-colors flex items-center'
                 aria-label={social.name}
               >

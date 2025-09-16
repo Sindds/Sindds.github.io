@@ -144,7 +144,7 @@ const Contacts = () => {
                                     <svg className="w-5 h-5 mr-3 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0C5.4 0 0 5.4 0 12c0 5.3 3.4 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 2.9-.4 1 0 2 .1 2.9.4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6C20.6 21.8 24 17.3 24 12c0-6.6-5.4-12-12-12z"/>
                                     </svg>
-                                    <a href="https://github.com/your_github" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a>
+                                    <a href="https://github.com/Sindds/Sindds.github.io" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a>
                                 </div>
                             </div>
                         </div>
