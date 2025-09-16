@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import telegram_icon from '/telegram_icon.png';
 
 const Contacts = () => {
   const [email, setEmail] = useState('');
@@ -124,7 +125,7 @@ const Contacts = () => {
                             <h3 className="text-lg font-semibold mb-4 text-center">Мои контакты</h3>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div className="flex items-center justify-center sm:justify-start">
-                                    <img src="/public/telegram_icon.png" alt="Telegram" className="w-6 h-6 mr-3" />
+                                    <img src={telegram_icon} alt="Telegram" className="w-6 h-6 mr-3" />
                                     <a href="https://t.me/sdmitris" className="text-blue-600 hover:underline" target="_blank">Telegram</a>
                                 </div>
                                 <div className="flex items-center justify-center sm:justify-start">
