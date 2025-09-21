@@ -14,15 +14,12 @@ const HeroSection = () => {
     <section className='min-h-screen flex flex-col justify-center items-center relative px-4 py-12'>
       <div className='text-center max-w-4xl mx-auto mb-16'>
         <h1 className='text-4xl md:text-5xl font-bold mb-6'>
-          Привет! Я <span className='text-blue-600'>Синдяев Дмитрий</span>,<br /> начинающий
+          Привет! Я <span className='text-blue-600'>Синдяев Дмитрий</span>,<br /> 
           фронтенд-разработчик.
         </h1>
 
         <p className='text-xl text-gray-600 mb-8 leading-relaxed'>
-          Мой React — это не только <code className='bg-gray-100 px-2 py-1 rounded'>useState</code>{' '}
-          и <code className='bg-gray-100 px-2 py-1 rounded'>useEffect</code>, но и искренний интерес
-          к тому, как кусочки кода складываются в удобные и живые интерфейсы. Учусь каждый день,
-          чтобы создавать то, что по-настоящему нравится людям.
+          Специализируюсь на React, TypeScript и другом современном стеке. Помогаю превращать идеи в работающие продукты.
         </p>
 
         <div className='flex justify-center gap-4'>

@@ -8,12 +8,32 @@ function WeatherApp() {
   const [weatherLoading, setWeatherLoading] = useState(true);
   const [error, setError] = useState(null);
   const [city, setCity] = useState('Moscow');
+  const [inputError, setInputError] = useState('');
 
   const API_KEY = import.meta.env.VITE_WEATHER_API_KEY || 'b42e7dd5195e44cde1bfe40d6570352c';
 
   // Функция для конвертации hPa в мм рт. ст.
   const convertPressure = (hpa) => {
     return Math.round(hpa * 0.750062);
+  };
+
+  // Функция валидации названия города
+  const validateCityName = (cityName) => {
+    const trimmedCity = cityName.trim();
+    
+    if (!trimmedCity) {
+      return 'Пожалуйста, введите название города';
+    }
+    
+    if (!/^[a-zA-Zа-яА-Я\s\-]+$/i.test(trimmedCity)) {
+      return 'Название города содержит недопустимые символы';
+    }
+    
+    if (trimmedCity.length < 2) {
+      return 'Название города слишком короткое';
+    }
+    
+    return '';
   };
 
   const fetchWeatherData = async (cityName) => {
@@ -33,6 +53,7 @@ function WeatherApp() {
       setForecast(forecastResponse.data);
       
       setError(null);
+      setInputError('');
     } catch (err) {
       setError('Город не найден. Попробуйте другой.');
       setCurrentWeather(null);
@@ -48,8 +69,28 @@ function WeatherApp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (city.trim()) {
-      fetchWeatherData(city);
+    const trimmedCity = city.trim();
+    
+    // Валидация введенного города
+    const validationError = validateCityName(city);
+    if (validationError) {
+      setInputError(validationError);
+      return;
+    }
+    
+    if (trimmedCity) {
+      setCity(trimmedCity); // Обновляем состояние очищенным значением
+      fetchWeatherData(trimmedCity);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const value = e.target.value;
+    setCity(value);
+    
+    // Сбрасываем ошибку при изменении input
+    if (inputError) {
+      setInputError('');
     }
   };
 
@@ -134,7 +175,7 @@ function WeatherApp() {
           <input
             type="text"
             value={city}
-            onChange={(e) => setCity(e.target.value)}
+            onChange={handleInputChange}
             placeholder="Введите город..."
             className="weather-search-input"
           />
@@ -143,6 +184,7 @@ function WeatherApp() {
           </button>
         </form>
 
+        {inputError && <div className="weather-error-message" style={{marginTop: '5px'}}>{inputError}</div>}
         {error && <div className="weather-error-message">{error}</div>}
 
         {currentWeather && (
@@ -187,7 +229,7 @@ function WeatherApp() {
               </div>
             </div>
 
-            {/* Прогноз на неделю */}
+            {/* Прогноз */}
             {forecast && dailyForecast.length > 0 && (
               <div className="weather-forecast">
                 <h3 className="forecast-title">Прогноз на ближайшие дни</h3>
