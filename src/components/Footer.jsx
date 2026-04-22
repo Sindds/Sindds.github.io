@@ -45,34 +45,38 @@ const Footer = ({
     { name: 'Contacts', href: Page.CONTACTS },
   ]
 
-  return (
-    <footer className='border-t border-gray-200 py-6 mt-auto bg-white text-black'>
-      <div className='container mx-auto px-4'>
-        <div className='flex flex-col md:flex-row justify-between items-center'>
-          <div className='mb-6 md:mb-0 pr-2'>
-            <h2 className='text-lg text-center font-light mb-2'>{Name}</h2>
-            <p className='text-sm text-center text-gray-600'>{copyrightText}</p>
+    return (
+      <footer className='border-t border-gray-200 py-6 mt-auto bg-white text-black'>
+        <div className='container mx-auto px-4'>
+
+          <div className='flex items-center max-[620px]:flex-col max-[620px]:gap-4'>
+
+            <div className='flex-1 max-[620px]:hidden' />
+
+            <div className='flex flex-col items-center text-center flex-1'>
+              <h2 className='text-lg font-light mb-1'>{Name}</h2>
+              <p className='text-sm text-gray-600'>{copyrightText}</p>
+            </div>
+
+            <div className='flex flex-1 justify-end gap-4 pr-4 max-[620px]:justify-center max-[620px]:pr-0'>
+              {socialLinks.map((social, index) => (
+                <NavLink
+                  key={index}
+                  to={social.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='text-gray-600 hover:text-black transition-colors flex items-center'
+                >
+                  {social.icon}
+                  <span className='ml-1 text-sm'>{social.name}</span>
+                </NavLink>
+              ))}
+            </div>
+
           </div>
 
-          {/* Социальные сети */}
-          <div className='flex space-x-4'>
-            {socialLinks.map((social, index) => (
-              <NavLink
-                key={index}
-                to={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className='text-gray-600 hover:text-black transition-colors flex items-center'
-                aria-label={social.name}
-              >
-                {social.icon}
-                <span className='ml-1 text-sm'>{social.name}</span>
-              </NavLink>
-            ))}
-          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
   )
 }
 

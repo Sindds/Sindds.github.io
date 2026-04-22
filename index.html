@@ -8,12 +8,12 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div  id="loader" class="loader">
-       <div class='flex space-x-2 justify-center items-center bg-white h-screen dark:invert'>
-         <div class='h-8 w-8 bg-black rounded-full animate-bounce [animation-delay:-0.3s]'></div>
-         <div class='h-8 w-8 bg-black rounded-full animate-bounce [animation-delay:-0.15s]'></div>
-         <div class='h-8 w-8 bg-black rounded-full animate-bounce'></div>
-       </div>
+    <div id="loader" class="loader">
+      <div class="flex space-x-2">
+        <div class="h-8 w-8 bg-black rounded-full animate-bounce"></div>
+        <div class="h-8 w-8 bg-black rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+        <div class="h-8 w-8 bg-black rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+      </div>
     </div>
     <div id="root"></div>
     <script type="module" src="./src/main.jsx"></script>

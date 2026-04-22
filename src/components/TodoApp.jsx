@@ -1,11 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const TodoApp = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(() => {
+      const saved = localStorage.getItem('tasks');
+      return saved ? JSON.parse(saved) :  [];
+    });
   const [newTask, setNewTask] = useState({ title: '', description: '' });
   const [editingId, setEditingId] = useState(null);
   const [editData, setEditData] = useState({ title: '', description: '' });
   const [draggedItem, setDraggedItem] = useState(null);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   const addTask = () => {
     if (newTask.title.trim()) {

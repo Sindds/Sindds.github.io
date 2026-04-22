@@ -9,7 +9,7 @@ const Header = () => {
   };
 
   return (
-    <header>  
+    <header className='sticky top-0 z-50 bg-white'>  
       <nav className="bg-white flex justify-center p-6 w-screen sm:p-6">
         <ul className="text-black flex gap-x-4 sm:gap-x-4">
           <li className="relative table-cell py-2">
