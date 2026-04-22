@@ -141,7 +141,7 @@ function WeatherApp() {
       nightIcon: day.nightIcons.length > 0 ? day.nightIcons[Math.floor(day.nightIcons.length / 2)] : '01n',
       pressure: Math.round(day.pressures.reduce((a, b) => a + b, 0) / day.pressures.length),
       description: day.descriptions[0]
-    })).slice(0, 7);
+    })).slice(0, 4);
   };
 
   const formatDate = (dateString) => {
