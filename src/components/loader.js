@@ -13,7 +13,7 @@ function hideLoader() {
 
     setTimeout(() => {
         loader.remove();
-    }, 500); // синхронно с opacity transition
+    }, 500); 
 }
 
 window.addEventListener('load', () => {

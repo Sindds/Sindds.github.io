@@ -6,37 +6,31 @@ const About = () => {
     <div className='min-h-screen bg-white py-8 sm:py-12 px-4 sm:px-6 lg:px-8'>
       <div className='max-w-4xl mx-auto fade-in'>
 
-        {/* Заголовок */}
         <section className='text-center mb-10 sm:mb-16'>
           <h1 className='text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-4'>
             Фронтенд-разработчик на React
           </h1>
         </section>
 
-        {/* О себе */}
         <section className='mb-10 sm:mb-16'>
           <div className='bg-gray-50 rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300'>
             <p className='font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 text-center leading-relaxed'>
-              <span className='text-blue-600'>Впервые попробовал</span> веб в 15 лет (прошёл курсы) —&nbsp;
-              <span className='text-blue-600'>понравилось</span>, но жизнь пошла в другую сторону: химфак, армия, завод, инженер.
-              В 2024-м один разговор на дне рождения изменил все планы. Верстка давалась тяжело, несколько раз бросал, но втянулся.
-              Теперь пишу на React и TypeScript — и, кажется,&nbsp;
-              <span className='text-blue-600'>это только начало</span>.
+              <span className='text-blue-600'>Впервые попробовал</span> веб-разработку в 2015 году (прошёл курсы) —&nbsp;
+              <span className='text-blue-600'>понравилось</span>, но жизнь пошла в другую сторону: химфак, армия, завод, работа инженером.
+              <br />В 2024 году один разговор на дне рождения изменил все планы. 
+              <br />Решил снова попробовать себя в веб-разработке.
+              Вёрстка давалась тяжело, несколько раз бросал, но со временем втянулся.
+              Теперь пишу на React и TypeScript — и, чувствую,&nbsp;
+              <span className='text-blue-600'> что это только начало</span>.
             </p>
           </div>
         </section>
 
-        {/* Стек */}
         <section className='mb-10 sm:mb-16'>
           <h2 className='text-2xl sm:text-3xl text-blue-600 font-bold text-center mb-8 sm:mb-12'>
             Мой стек технологий
           </h2>
           <div className='bg-gray-50 rounded-2xl p-4 sm:p-6 shadow-sm'>
-            {/*
-              320–399px : 1 столбец (названия не обрезаются)
-              400–767px : 2 столбца
-              768px+    : 4 столбца
-            */}
             <div className='grid grid-cols-1 min-[400px]:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-center'>
               {[
                 'HTML5',
@@ -63,7 +57,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Навыки */}
         <section className='mb-10 sm:mb-16'>
           <h2 className='text-2xl sm:text-3xl text-blue-600 font-bold text-center mb-8 sm:mb-12'>
             Мои навыки
@@ -72,7 +65,7 @@ const About = () => {
             <ul className='grid grid-cols-1 md:grid-cols-2 gap-3'>
               {[
                 'Верстаю адаптивные интерфейсы с помощью Tailwind CSS',
-                'Пишу SPA на React с клиентской маршрутизацией',
+                'Разрабатываю SPA на React с клиентской маршрутизацией',
                 'Работаю с REST API — fetch, async/await, обработка ошибок',
                 'Оптимизирую производительность — memo, useCallback, useMemo',
                 'Использую Git — ветки, коммиты, pull request',
@@ -87,7 +80,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* CTA */}
         <section className='text-center mb-8'>
           <div className='bg-gray-50 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300'>
             <p className='text-base sm:text-lg md:text-xl font-bold text-gray-700 mb-6'>
