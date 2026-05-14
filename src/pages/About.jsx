@@ -13,20 +13,6 @@ const About = () => {
         </section>
 
         <section className='mb-10 sm:mb-16'>
-          <div className='bg-gray-50 rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300'>
-            <p className='font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 text-center leading-relaxed'>
-              <span className='text-blue-600'>Впервые попробовал</span> веб-разработку в 2015 году (прошёл курсы) —&nbsp;
-              <span className='text-blue-600'>понравилось</span>, но жизнь пошла в другую сторону: химфак, армия, завод, работа инженером.
-              <br />В 2024 году один разговор на дне рождения изменил все планы. 
-              <br />Решил снова попробовать себя в веб-разработке.
-              Вёрстка давалась тяжело, несколько раз бросал, но со временем втянулся.
-              Теперь пишу на React и TypeScript — и, чувствую,&nbsp;
-              <span className='text-blue-600'> что это только начало</span>.
-            </p>
-          </div>
-        </section>
-
-        <section className='mb-10 sm:mb-16'>
           <h2 className='text-2xl sm:text-3xl text-blue-600 font-bold text-center mb-8 sm:mb-12'>
             Мой стек технологий
           </h2>
@@ -44,7 +30,7 @@ const About = () => {
                 'Git',
                 'REST API',
                 'Next.js 15.0+',
-                'Figma',
+                'Zustand',
               ].map(tech => (
                 <div
                   key={tech}
@@ -77,6 +63,44 @@ const About = () => {
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className='mb-10 sm:mb-16'>
+          <div className='bg-gray-50 rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300'>
+            <p className='font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 text-center leading-relaxed'>
+              <span className='text-blue-600'>В веб-разработку</span> я впервые пришёл ещё в 2015 году — тогда прошёл курсы и 
+              впервые попробовал верстку, базовую логику. 
+              Дальше жизнь ушла в другую сторону: учёба на химфаке, армия, работа инженером на производстве. 
+              <span className='text-blue-600'> Но интерес к разработке не исчез</span> — скорее оставался фоном всё это время. 
+            </p>
+          </div>
+        </section>
+
+        <section className='mb-10 sm:mb-16'>
+          <div className='bg-gray-50 rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300'>
+            <p className='font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 text-center leading-relaxed'>
+              <span className='text-blue-600'>В 2024 году</span> я вернулся в frontend после одного разговора, 
+              который фактически стал <span className='text-blue-600'>новым витком</span> моего развития. 
+              Начинал с <span className='text-blue-600'>верстки</span> и базового <span className='text-blue-600'>JavaScript</span>, местами было непросто — несколько раз бросал и возвращался. 
+              Но постепенно процесс начал складываться: появилась уверенность в работе с <span className='text-blue-600'>React</span> и 
+              <span className='text-blue-600'> TypeScript </span>  
+              понимание архитектуры интерфейсов и того, как строить приложения целиком, а не отдельные страницы.
+            </p>
+          </div>
+        </section>
+
+        <section className='mb-10 sm:mb-16'>
+          <div className='bg-gray-50 rounded-2xl p-5 sm:p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300'>
+            <p className='font-semibold text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 text-center leading-relaxed'>
+              <span className='text-blue-600'>Сейчас</span> я работаю с <span className='text-blue-600'>React 19</span> и 
+              <span className='text-blue-600'> Next.js 15</span>, собираю 
+              полноценные приложения: от <span className='text-blue-600'>UI</span> и состояния до серверных 
+              <span className='text-blue-600'> API</span>-роутов и админки. 
+              В проектах делал <span className='text-blue-600'>SPA</span> с интеграцией внешних API, системы с авторизацией, экспортом данных в Excel, 
+              drag-and-drop логикой и серверной валидацией. Стараюсь не просто «реализовать задачу», 
+              а <span className='text-blue-600'>продумать структуру</span> так, чтобы код можно было спокойно развивать дальше.
+            </p>
           </div>
         </section>
 
