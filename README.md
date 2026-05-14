@@ -51,8 +51,8 @@ src/
 ## Getting Started
  
 ```bash
-git clone https://github.com/sindds/sindds-github-io
-cd sindds-github-io
+git clone https://github.com/sindds/sindds
+cd sindds
 npm install
 ```
  
