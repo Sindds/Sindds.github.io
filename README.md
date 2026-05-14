@@ -2,7 +2,7 @@
  
 Interactive portfolio built with React + TypeScript, showcasing practical development skills across three standalone applications.
  
-**[Live Demo](https://sindds-github-io.vercel.app)**
+**[Live Demo](https://sindds.vercel.app)**
  
 ---
  
